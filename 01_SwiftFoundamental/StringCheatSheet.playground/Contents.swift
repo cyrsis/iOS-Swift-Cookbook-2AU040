@@ -26,8 +26,8 @@ let sixString = "\(sixNumber)"
 
 //把字串全部變大寫或是小寫
 let mixString = "AbcDEfghiJKLmnOP"
-mixString.uppercaseString //字串變大寫
-mixString.lowercaseString //字串變小寫
+mixString.uppercased //字串變大寫
+mixString.lowercased //字串變小寫
 
 //計算字串的字數
 let whatILove = "I love Swift"
@@ -63,12 +63,12 @@ import Foundation
 let originalString = "Developers are so cool"
 let myRange = NSMakeRange(0, 9)
 let rangeString =
-        NSString(string: originalString).substringWithRange(myRange)
+        NSString(string: originalString).substring(with: myRange)
 
 //找尋字串
 let longString = "iPhone, iPad, iPod, and Apple TV"
 let keyWord = "iPad"
-if let wordRange = longString.rangeOfString(keyWord){
+if let wordRange = longString.range(of: keyWord){
     print(wordRange)
 }else{
     "Can't find this keyword"
