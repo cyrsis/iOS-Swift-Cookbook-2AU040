@@ -19,7 +19,7 @@ arrayToTest.count
 var animalArray = ["mouse","cow","tiger"]
 animalArray.append("rabbit")
 animalArray += ["dragon"]
-animalArray.insert("new animal", atIndex: 2)
+animalArray.insert("new animal", at: 2)
 
 //兩個陣列相加
 var numberArray = [1,2,3,4,5,6,7,8,9,10]
@@ -32,7 +32,7 @@ alphabet.removeFirst(3)
 alphabet
 alphabet.removeFirst()
 alphabet.removeLast()
-alphabet.removeAtIndex(2)
+alphabet.remove(at: 2)
 
 //分割陣列
 var numberStringArray = ["1","2","3","4","5","6","7","8"]
@@ -45,7 +45,7 @@ unorderedArray.sort()
 
 //反轉陣列
 var highscoreArray = [999,780,650,340,220,100]
-var reverseArray = Array(highscoreArray.reverse())
+var reverseArray = Array(highscoreArray.reversed())
 
 //攪亂陣列順序
 import Foundation
@@ -63,7 +63,7 @@ func shuffleArray<T>(originalArray:[T]) -> [T]{
 }
 
 let sampleArray = [1,2,3,4,5,6,7,8,9]
-shuffleArray(sampleArray)
+shuffleArray(originalArray: sampleArray)
 
 
 
