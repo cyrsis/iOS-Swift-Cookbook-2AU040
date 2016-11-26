@@ -22,7 +22,7 @@ numberDictionary.updateValue("trois", forKey: 3)
 
 //移除資料
 var mapDictionary = ["Taipei":"North","Tainan":"South","Taitung":"East"]
-mapDictionary.removeValueForKey("Taipei")
+mapDictionary.removeValue(forKey: "Taipei")
 mapDictionary["Tainan"] = nil
 mapDictionary.removeAll()
 mapDictionary = [:]
