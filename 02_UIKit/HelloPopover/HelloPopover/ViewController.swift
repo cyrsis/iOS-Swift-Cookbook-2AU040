@@ -8,14 +8,14 @@ import UIKit
 
 class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
 
-    @IBAction func buttonPressed(sender: UIButton) {
-        performSegueWithIdentifier("showPopover", sender: nil)
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "showPopover", sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPopover"{
-            let vc = segue.destinationViewController
-            vc.preferredContentSize = CGSizeMake(200, 100) //設定浮動畫面大小
+            let vc = segue.destination
+            vc.preferredContentSize = CGSize(width: 200, height: 100) //設定浮動畫面大小
             //取得 popoverPresentationController
             let controller = vc.popoverPresentationController
             if controller != nil{
@@ -25,8 +25,8 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         }
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None //設定style
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none //設定style
     }
 }
 

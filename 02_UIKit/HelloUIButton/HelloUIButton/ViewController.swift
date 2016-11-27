@@ -8,7 +8,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func buttonPressed(sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         print("button pressed")
     }
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
     }
     
-    func hitMe(button:UIButton){
+    func hitMe(_ button:UIButton){
         print("new button pressed")
     }
 }
