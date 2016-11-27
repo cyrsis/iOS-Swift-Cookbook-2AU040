@@ -8,7 +8,7 @@
 
 import Foundation
 class Calculator {
-    func add(number1:Int, number2:Int){
+    func add(_ number1:Int, number2:Int){
         print("answer from swift file: \(number1 + number2)")
     }
 }
